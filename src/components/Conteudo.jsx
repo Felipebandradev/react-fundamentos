@@ -1,6 +1,5 @@
 import Artigo from "./Artigo";
 
-
 function Conteudo() {
   return (
     <main>
@@ -13,12 +12,13 @@ function Conteudo() {
           labore iste veniam possimus facere adipisci sit repellat, voluptate,
           expedita aspernatur.
         </p>
+
+        <hr />
         <Artigo />
 
         <Artigo />
-        
+
         <Artigo />
-      
       </section>
     </main>
   );

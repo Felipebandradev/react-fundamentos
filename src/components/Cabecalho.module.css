@@ -2,5 +2,18 @@
 
 /* Sombra texto */
 .sombra {
-    text-shadow: green 2px 2px 5px;
+  text-shadow: rgb(107, 148, 224) 2px 2px 5px;
+}
+
+hr {
+  height: 4px;
+  border: none;
+  background-color: rgb(221, 78, 221);
+  margin: auto;
+}
+
+.destaque-texto {
+  color: #fce3ed;
+  text-transform: uppercase;
+  background-color: #d94f95;
 }

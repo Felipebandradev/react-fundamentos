@@ -31,4 +31,15 @@ body{
 }
 
 
+.destaque-texto{
+  background-color: #4665e2;
+  padding: 4px;
+  margin: auto;
+}
+
+.centralizar{
+  text-align: center;
+}
+
+
 
