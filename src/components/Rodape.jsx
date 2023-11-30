@@ -12,6 +12,8 @@ function Rodape() {
       {/* Utilizando o css in js inline 
       obs: ele é em formato de obj  */}
       <h2 style={{textAlign: "center"}}>Rodapé da aplicação</h2>
+      <p> fundamentos de React</p>
+      <p>Experimentando <b className="sombra">classes</b></p>
     </footer>
   );
 }

@@ -19,5 +19,14 @@ body, h1, h2, h3, p{
 
 html { font-size: 18px;}
 
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sombra:hover{
+  cursor: pointer;
+  color: rgb(93, 209, 224);
+  text-shadow: rgb(73, 73, 73) 0 0 10px;
+}
+
 
 
