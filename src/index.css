@@ -22,9 +22,11 @@ html { font-size: 18px;}
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.sombra:hover{
+.sombra{
   cursor: pointer;
-  color: rgb(93, 209, 224);
+  box-shadow: rgb(135, 219, 135) 0 0 10px;
+  border-radius: 15px;
+  background-color:rgb(130, 212, 181);
   text-shadow: rgb(73, 73, 73) 0 0 10px;
 }
 
