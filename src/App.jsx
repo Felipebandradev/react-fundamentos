@@ -4,7 +4,7 @@ import Rodape from "./components/Rodape";
 
 function App() {
   return (
-    <>
+    <>   {/* fragmentação */}
       <Cabecalho />
       <Conteudo />
       <Rodape />
