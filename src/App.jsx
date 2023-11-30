@@ -1,10 +1,12 @@
-import Cabecalho from "./components/Cabecalho";
+import Cabecalho from "./components/Cabecalho/Cabecalho";
 import Conteudo from "./components/Conteudo";
 import Rodape from "./components/Rodape";
 
 function App() {
   return (
-    <>   {/* fragmentação */}
+    <>
+      {" "}
+      {/* fragmentação */}
       <Cabecalho />
       <Conteudo />
       <Rodape />

@@ -1,0 +1,23 @@
+.img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card {
+  background: rgb(150, 106, 9);
+  background: linear-gradient(
+    336deg,
+    rgba(150, 106, 9, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  margin: 25px;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: black 0 0 10px;
+}
+
+.card > h3,
+.card > p {
+  margin: 10px;
+}

@@ -1,4 +1,4 @@
-import Menu from "./Menu.jsx";
+import Menu from "../Menu.jsx";
 
 /* Importação de modulo CSS como um objeto
 chamado styles (o nome é a seu critério) */
@@ -11,7 +11,9 @@ function Cabecalho() {
         Olá <span className={style.sombra}>React!</span> 😎
       </h1>
       <hr />
-      <p className={`${style["destaque-texto"]} centralizar`}>Classes Combinadas</p>
+      <p className={`${style["destaque-texto"]} centralizar`}>
+        Classes Combinadas
+      </p>
       <Menu />
     </header>
   );

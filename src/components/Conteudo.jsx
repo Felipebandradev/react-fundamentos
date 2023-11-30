@@ -1,4 +1,4 @@
-import Artigo from "./Artigo";
+import Artigo from "./Artigo/Artigo";
 
 function Conteudo() {
   return (
@@ -13,12 +13,11 @@ function Conteudo() {
           expedita aspernatur.
         </p>
 
-        <hr />
-        <Artigo />
-
-        <Artigo />
-
-        <Artigo />
+        <article className={`flex`}>
+          <Artigo />
+          <Artigo />
+          <Artigo />
+        </article>
       </section>
     </main>
   );
