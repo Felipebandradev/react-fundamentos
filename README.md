@@ -11,7 +11,9 @@ JSX -> HTML + JS para criar componentes
 ## 04-estilos
 
 - CSS in JS
-  - CSS inline
+  - CSS inline: aplicando via atributo style da tag usando sintaxe JS, ou seja, objeto com propiedades.
+  
+  - CSS externo e global
 
 ---
 ## 00-projeto-resetado
