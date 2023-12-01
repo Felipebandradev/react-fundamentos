@@ -26,6 +26,9 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
