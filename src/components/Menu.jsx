@@ -11,12 +11,13 @@ const StyledMenu = styled.nav`
   a {
     text-decoration: none;
     color: white;
-    
-  }
-  a:hover {
+  /* & -> referência ao
+  seletor pai (a) */
+  &:hover {
     background-color: pink;
     color: black ;
   }
+}
 `;
 
 function Menu() {
