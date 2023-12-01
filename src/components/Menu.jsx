@@ -14,9 +14,8 @@ const StyledMenu = styled.nav`
     
   }
   a:hover {
-    color: #d4b03b;
-    background-color: #5455aa;
-    
+    background-color: pink;
+    color: black ;
   }
 `;
 
