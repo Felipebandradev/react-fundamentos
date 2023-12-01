@@ -1,5 +1,9 @@
 # Fundamentos de React
 
+## 05-styled-components
+
+`npm install styled-components`
+
 ## Resumo/Revisão
 
 JSX -> HTML + JS para criar componentes
@@ -18,8 +22,8 @@ JSX -> HTML + JS para criar componentes
 
 - CSS Module: arquivo CSS especial relacionando ao componente que desejamos estilizar. Normalmente, nomeia-se o arquivo como "NomeComponente.module.css". A vantagem de usar CSS Modules é criar um escopo de estilização evitando complitos de classes com o mesmo nome.
 
-
 ---
+
 ## 00-projeto-resetado
 
 ### Informações gerais
