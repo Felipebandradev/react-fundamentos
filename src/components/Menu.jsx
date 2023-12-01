@@ -11,11 +11,19 @@ const StyledMenu = styled.nav`
   a {
     text-decoration: none;
     color: white;
+    width: 30%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 100ms;
+
   /* & -> referência ao
   seletor pai (a) */
   &:hover {
     background-color: pink;
     color: black ;
+    transform: scale(1.05);
   }
 }
 `;
