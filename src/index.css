@@ -4,42 +4,51 @@ da aplicação React */
 
 /* :: After = Espaço  após o conteudo
     ::before = Espaço antes do conteúdo */
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
 /* Reset */
-body, h1, h2, h3, p{
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
 }
 
-
-
-
-html { font-size: 18px;}
-
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html {
+  font-size: 18px;
 }
-.sombra{
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+.sombra {
   cursor: pointer;
   box-shadow: rgb(135, 219, 135) 0 0 10px;
   border-radius: 15px;
-  background-color:rgb(130, 212, 181);
+  background-color: rgb(130, 212, 181);
   text-shadow: rgb(73, 73, 73) 0 0 10px;
 }
 
-
-.destaque-texto{
+.destaque-texto {
   background-color: #4665e2;
   padding: 4px;
   margin: auto;
 }
 
-.centralizar{
+.centralizar {
   text-align: center;
 }
-
-
-
