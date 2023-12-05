@@ -1,7 +1,7 @@
 import { StyledConteudo } from "../styles/styles.js";
 import Artigo from "./Artigo";
 
-const dataLivro = ["1980", "2010", "2016"];
+const dataLivro = ["10/10/1980", "10/07/2010", "14/04/2016"];
 
 function Conteudo() {
   return (

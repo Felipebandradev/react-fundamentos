@@ -67,14 +67,13 @@ const StyledMenu = styled.nav`
     /* & -> referência ao
   seletor pai (a) */
     &:hover {
-      background-color: #d126e0;
+      background-color: #fff;
       border-radius: 15px;
-      color: #f5e3f8;
+      color: black;
       transform: scale(1.05);
     }
   }
 `;
-
 
 const StyledArtigo = styled.article`
   background-color: lavender;
@@ -103,7 +102,7 @@ const StyledCabecalho = styled.header`
 
   hr {
     width: 50%;
-    background-color: #d43bb3;
+    background-color: #fff;
     border: none;
     height: 4px;
     margin: 8px auto;

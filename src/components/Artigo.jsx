@@ -4,9 +4,13 @@ import { StyledArtigo } from "../styles/styles.js";
 function Artigo(props) {
   return (
     <StyledArtigo>
-      <h3>{props.icone} {props.titulo}  </h3>
+      <h3>
+        {props.icone} {props.titulo}
+      </h3>
       <p>{props.descricao}</p>
-      <p>Data de Lançamento: <time>{props.data}</time></p>
+      <p>
+        Lançamento:<time>{props.data}</time>
+      </p>
     </StyledArtigo>
   );
 }
