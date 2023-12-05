@@ -10,16 +10,14 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZHY07meLfQ_UKMhm4wUJu-hM50w3Cv1zfOMzJQoZSFnzkrAZd05nRDrSv-klFxJGxjMw&usqp=CAU);
 }
 
-#root{
+#root {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
 
 body,
 h1,
