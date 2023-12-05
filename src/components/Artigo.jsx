@@ -1,5 +1,5 @@
 import { StyledArtigo } from "../styles/styles.js";
-import { DiCode } from "react-icons/di";
+import { DiCodeBadge } from "react-icons/di";
 
 /* Definindo props para o componente */
 function Artigo( props ) {
@@ -12,7 +12,7 @@ function Artigo( props ) {
   return (
     <StyledArtigo>
       <h3>
-        <DiCode /> {props.categoria}
+        <DiCodeBadge /> {props.categoria}
       </h3>
       <p>
         <b>curso:</b> {props.titulo}

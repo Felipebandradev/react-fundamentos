@@ -44,7 +44,7 @@ const StyledConteudo = styled.main`
 
       & article {
         width: 45%;
-        margin: 0.5rem auto;
+        margin: 1.5%;
       }
     }
   }
