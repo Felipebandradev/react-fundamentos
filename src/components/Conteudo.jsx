@@ -1,8 +1,6 @@
 import { StyledConteudo } from "../styles/styles.js";
 import Artigo from "./Artigo";
 
-
-
 function Conteudo() {
   return (
     <StyledConteudo>
@@ -15,9 +13,21 @@ function Conteudo() {
         expedita aspernatur.
       </p>
       <section className="artigos">
-        <Artigo />
-        <Artigo />
-        <Artigo />
+        <Artigo
+          icone="🏹"
+          titulo="Senhor dos Anéis"
+          descricao="Senhor com Anéis"
+        />
+        <Artigo
+          icone="🐲"
+          titulo="Game of Thrones"
+          descricao="final que não pode ser visto"
+        />
+        <Artigo
+          icone="🕷"
+          titulo="Coven"
+          descricao="Melhor linha de skins do lol"
+        />
       </section>
     </StyledConteudo>
   );

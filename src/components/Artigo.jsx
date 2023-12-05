@@ -1,12 +1,11 @@
 import { StyledArtigo } from "../styles/styles.js";
 
-
-
-function Artigo() {
+/* Definindo props para o componente */
+function Artigo(props) {
   return (
     <StyledArtigo>
-      <h3>Artigo </h3>
-      <p>Conteúdo do artigo ....</p>
+      <h3>{props.icone} {props.titulo}  </h3>
+      <p>{props.descricao}</p>
     </StyledArtigo>
   );
 }
