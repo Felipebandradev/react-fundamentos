@@ -43,7 +43,8 @@ const StyledConteudo = styled.main`
       flex-wrap: wrap;
 
       & article {
-        width: 32%;
+        width: 45%;
+        margin: 0.5rem auto;
       }
     }
   }
@@ -81,17 +82,14 @@ const StyledArtigo = styled.article`
   padding: 1rem;
   margin: 0.5rem 0;
   border: inset #eb418a 1px;
-  border-radius: 15px 0;
-  height: 450px;
+  border-radius: 15px ;
+  /* height: 450px; */
   max-width: 100%;
   .centralizar {
     text-align: center;
   }
 
-  img {
-    max-width: 100%;
-    margin: 0.5rem auto;
-  }
+  
 
   h3 {
     color: purple;
@@ -101,6 +99,12 @@ const StyledArtigo = styled.article`
   p {
     font-size: 1.1rem;
   }
+
+  svg {
+    font-size: 2rem;
+  }
+
+ 
 `;
 
 const StyledCabecalho = styled.header`

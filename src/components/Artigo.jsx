@@ -1,20 +1,25 @@
 import { StyledArtigo } from "../styles/styles.js";
+import { DiCode } from "react-icons/di";
 
 /* Definindo props para o componente */
-function Artigo({ img, icone, titulo, descricao, data, children }) {
+function Artigo({ titulo, categoria, preco }) {
+  const precoFormatado = preco.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: 2,
+  });
+
   return (
     <StyledArtigo>
-      <p className="centralizar">
-        <img src={img} alt={titulo} />
-      </p>
       <h3>
-        {icone} {titulo}
+        <DiCode /> {categoria}
       </h3>
-      <p>{descricao}</p>
       <p>
-        Lançamento: <time>{data}</time>
+        <b>curso:</b> {titulo}
       </p>
-      {children}
+      <p>
+        <b>preço:</b> {precoFormatado}
+      </p>
     </StyledArtigo>
   );
 }
