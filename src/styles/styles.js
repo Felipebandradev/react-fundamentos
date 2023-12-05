@@ -82,13 +82,13 @@ const StyledArtigo = styled.article`
   margin: 0.5rem 0;
   border: inset #eb418a 1px;
   border-radius: 15px 0;
-
-  .centralizar{
+  height: 450px;
+  max-width: 100%;
+  .centralizar {
     text-align: center;
   }
-  
 
-  img{
+  img {
     max-width: 100%;
     margin: 0.5rem auto;
   }
@@ -99,10 +99,8 @@ const StyledArtigo = styled.article`
   }
 
   p {
-    font-size: 1.1rem;    
+    font-size: 1.1rem;
   }
-
-  
 `;
 
 const StyledCabecalho = styled.header`
