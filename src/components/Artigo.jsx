@@ -4,12 +4,15 @@ import { StyledArtigo } from "../styles/styles.js";
 function Artigo(props) {
   return (
     <StyledArtigo>
+      <p className="centralizar">
+        <img src={props.img} alt={props.titulo} />
+      </p>
       <h3>
         {props.icone} {props.titulo}
       </h3>
       <p>{props.descricao}</p>
       <p>
-        Lançamento:<time>{props.data}</time>
+        Lançamento: <time>{props.data}</time>
       </p>
     </StyledArtigo>
   );

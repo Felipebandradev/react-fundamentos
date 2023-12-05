@@ -40,6 +40,7 @@ const StyledConteudo = styled.main`
       display: flex;
       justify-content: space-around;
       align-items: center;
+      flex-wrap: wrap;
 
       & article {
         width: 32%;
@@ -82,14 +83,26 @@ const StyledArtigo = styled.article`
   border: inset #eb418a 1px;
   border-radius: 15px 0;
 
+  .centralizar{
+    text-align: center;
+  }
+  
+
+  img{
+    max-width: 100%;
+    margin: 0.5rem auto;
+  }
+
   h3 {
     color: purple;
     border-bottom: solid #8662d8;
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.1rem;    
   }
+
+  
 `;
 
 const StyledCabecalho = styled.header`
