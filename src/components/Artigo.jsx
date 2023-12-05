@@ -1,20 +1,20 @@
 import { StyledArtigo } from "../styles/styles.js";
 
 /* Definindo props para o componente */
-function Artigo(props) {
+function Artigo({ img, icone, titulo, descricao, data, children }) {
   return (
     <StyledArtigo>
       <p className="centralizar">
-        <img src={props.img} alt={props.titulo} />
+        <img src={img} alt={titulo} />
       </p>
       <h3>
-        {props.icone} {props.titulo}
+        {icone} {titulo}
       </h3>
-      <p>{props.descricao}</p>
+      <p>{descricao}</p>
       <p>
-        Lançamento: <time>{props.data}</time>
+        Lançamento: <time>{data}</time>
       </p>
-      {props.children}
+      {children}
     </StyledArtigo>
   );
 }
