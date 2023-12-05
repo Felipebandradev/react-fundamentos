@@ -1,6 +1,8 @@
 import { StyledConteudo } from "../styles/styles.js";
 import Artigo from "./Artigo";
 
+const dataLivro = ["1980", "2010", "2016"];
+
 function Conteudo() {
   return (
     <StyledConteudo>
@@ -14,16 +16,19 @@ function Conteudo() {
       </p>
       <section className="artigos">
         <Artigo
+          data={dataLivro[0]}
           icone="🏹"
           titulo="Senhor dos Anéis"
           descricao="Senhor com Anéis"
         />
         <Artigo
+          data={dataLivro[1]}
           icone="🐲"
           titulo="Game of Thrones"
           descricao="final que não pode ser visto"
         />
         <Artigo
+          data={dataLivro[2]}
           icone="🕷"
           titulo="Coven"
           descricao="Melhor linha de skins do lol"

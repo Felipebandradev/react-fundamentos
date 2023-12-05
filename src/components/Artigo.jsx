@@ -6,6 +6,7 @@ function Artigo(props) {
     <StyledArtigo>
       <h3>{props.icone} {props.titulo}  </h3>
       <p>{props.descricao}</p>
+      <p>Data de Lançamento: <time>{props.data}</time></p>
     </StyledArtigo>
   );
 }
