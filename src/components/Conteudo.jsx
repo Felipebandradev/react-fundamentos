@@ -17,9 +17,13 @@ function Conteudo() {
     const categoriaEscolhida = event.currentTarget.innerText;
     /* Em seguida passamos este texto para o state de categoria */
     setCategoria(categoriaEscolhida);
-    
   };
 
+  /* Gerando um novo array de cursos filtrados */
+  const cursosFiltrados = cursos.filter((curso) => {
+    /*  Se o state categoria for igual a uma     das categorias dos cursos, então será retornada    a lista de cursos daquela categoria. Senão, será     retornada lista completa devido ao state ser null (ou seja,    não há uma categoria para filtrar) */
+    return curso.categoria === categoria || categoria === null
+  });
 
   return (
     <StyledConteudo>
@@ -35,19 +39,27 @@ function Conteudo() {
       <div className="filtros">
         <p>
           <b>
-            Filtrar por <CgCopy />:{" "}
+            Filtrar por <CgCopy />:
           </b>
           <button onClick={aplicarFiltro}>Front-end</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
         </p>
-        
+
         {/* Rederização condicional o texto/tag/componente será renderizado se o state categoria existir (ou seja não é null, undefined, false)
          */}
-        {categoria !== null && (<p className="escolha"> Você Escolheu: <b>{categoria} <CgAttachment /></b> </p> )}
+        {categoria !== null && (
+          <p>
+            {" "}
+            Você Escolheu:{" "}
+            <b>
+              {categoria} <CgAttachment />
+            </b>{" "}
+          </p>
+        )}
       </div>
       <section className="artigos">
-        {cursos.map((curso) => (
+        {cursosFiltrados.map((curso) => (
           <Artigo
             key={curso.id}
             titulo={curso.titulo}

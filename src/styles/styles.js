@@ -34,32 +34,35 @@ const StyledConteudo = styled.main`
     padding: 0.2rem 0;
   }
 
-  .filtros{
-      margin: 1rem 0 ;
-      padding: 1rem 0;
-      border-top: solid 2px;
-      border-bottom: solid 2px;
-    }
+  .filtros {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+  }
 
-    .filtros button{
-      color: purple;
-      margin: 0.5rem;
-      padding: 0.2rem;
-      font-size: 1.1rem;
-      border: none;
-      background-color: lavender;
-      border-radius: 10px;
-    
-    }
+  .filtros button {
+    color: purple;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+    border: none;
+    background-color: lavender;
+    border-radius: 10px;
+  }
 
-    .filtros button:hover{
-          background-color: purple;
-          color: lavender;
-        }
+  .filtros button:hover {
+    background-color: purple;
+    color: lavender;
+  }
 
-    .escolha svg{
-      color: #8797e2;
-    }
+  .filtros b {
+    color: #6c6371;
+  }
+
+  .filtros svg {
+    color: #8797e2;
+  }
 
   @media screen and (min-width: 650px) {
     .artigos {
@@ -74,8 +77,6 @@ const StyledConteudo = styled.main`
         margin: 1.5%;
       }
     }
-
-  
   }
 `;
 
@@ -111,14 +112,12 @@ const StyledArtigo = styled.article`
   padding: 1rem;
   margin: 0.5rem 0;
   border: inset #eb418a 1px;
-  border-radius: 15px ;
+  border-radius: 15px;
   /* height: 450px; */
   max-width: 100%;
   .centralizar {
     text-align: center;
   }
-
-  
 
   h3 {
     color: purple;
@@ -132,8 +131,6 @@ const StyledArtigo = styled.article`
   svg {
     font-size: 2rem;
   }
-
- 
 `;
 
 const StyledCabecalho = styled.header`
