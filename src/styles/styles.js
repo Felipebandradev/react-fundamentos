@@ -49,6 +49,7 @@ const StyledConteudo = styled.main`
     border: none;
     background-color: lavender;
     border-radius: 10px;
+    box-shadow: 0 0 10px #48424b  ;
   }
 
   .filtros button:hover {
@@ -63,6 +64,10 @@ const StyledConteudo = styled.main`
   .filtros svg {
     color: #8797e2;
   }
+
+  
+
+ 
 
   @media screen and (min-width: 650px) {
     .artigos {

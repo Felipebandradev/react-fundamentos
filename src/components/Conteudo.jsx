@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { StyledConteudo } from "../styles/styles.js";
-import { CgCopy, CgAttachment } from "react-icons/cg";
+import { CgCopy, CgAttachment, CgClose } from "react-icons/cg";
 
 import Artigo from "./Artigo";
 
@@ -22,7 +22,7 @@ function Conteudo() {
   /* Gerando um novo array de cursos filtrados */
   const cursosFiltrados = cursos.filter((curso) => {
     /*  Se o state categoria for igual a uma     das categorias dos cursos, então será retornada    a lista de cursos daquela categoria. Senão, será     retornada lista completa devido ao state ser null (ou seja,    não há uma categoria para filtrar) */
-    return curso.categoria === categoria || categoria === null
+    return curso.categoria === categoria || categoria === null;
   });
 
   return (
@@ -44,6 +44,14 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Front-end</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
+          <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Música</button>
+          <button onClick={aplicarFiltro}>Gastronomia</button>
+          {categoria !== null && (
+            <button onClick={() => setCategoria(null)}>
+            🧹  Limpar Filtro
+            </button>
+          )}
         </p>
 
         {/* Rederização condicional o texto/tag/componente será renderizado se o state categoria existir (ou seja não é null, undefined, false)
