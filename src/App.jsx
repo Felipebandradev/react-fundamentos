@@ -6,18 +6,22 @@ import Contato from "./pages/Contato";
 import Home from "./pages/Home";
 import Produtos from "./pages/Produtos";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
-      {/* fragmentação */}
-      <Cabecalho />
-      {/* <Conteudo /> */}
-      <Container>
-        <Home />
-        <Produtos />
-        <Contato />
-      </Container>
-      <Rodape />
+      <BrowserRouter>
+        <Cabecalho />
+        <Container>
+          <Routes>
+            <Route Component={Home} exact path="/" />
+            <Route Component={Produtos} path="/produtos" />
+            <Route Component={Contato} path="/contato" />
+          </Routes>
+        </Container>
+        <Rodape />
+      </BrowserRouter>
     </>
   );
 }

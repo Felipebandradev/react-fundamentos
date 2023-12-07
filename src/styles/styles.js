@@ -20,7 +20,7 @@ const StyledRodape = styled.footer`
   }
 `;
 
-const StyledListaCursos = styled.main`
+const StyledListaCursos = styled.section`
 
 
   .filtros {
