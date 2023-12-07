@@ -21,18 +21,7 @@ const StyledRodape = styled.footer`
 `;
 
 const StyledConteudo = styled.main`
-  width: 90vw;
-  margin: 1rem auto;
-  background-color: aliceblue;
-  padding: 1rem;
-  box-shadow: darkblue 0 0 1px inset;
-  border-radius: 15px 0;
-  flex: 1;
 
-  h2,
-  p {
-    padding: 0.2rem 0;
-  }
 
   .filtros {
     margin: 1rem 0;
@@ -162,10 +151,26 @@ const StyledCabecalho = styled.header`
   }
 `;
 
+const StyledContainer = styled.main`
+ width: 90vw;
+  margin: 1rem auto;
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: darkblue 0 0 1px inset;
+  border-radius: 15px 0;
+  flex: 1;
+
+  h2,
+  p {
+    padding: 0.2rem 0;
+  }
+`;
+
 export {
   StyledRodape,
   StyledConteudo,
   StyledMenu,
   StyledArtigo,
   StyledCabecalho,
+  StyledContainer
 };
