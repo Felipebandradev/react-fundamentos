@@ -41,6 +41,26 @@ const StyledConteudo = styled.main`
       border-bottom: solid 2px;
     }
 
+    .filtros button{
+      color: purple;
+      margin: 0.5rem;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+      border: none;
+      background-color: lavender;
+      border-radius: 10px;
+    
+    }
+
+    .filtros button:hover{
+          background-color: purple;
+          color: lavender;
+        }
+
+    .escolha svg{
+      color: #8797e2;
+    }
+
   @media screen and (min-width: 650px) {
     .artigos {
       margin: 10px auto;

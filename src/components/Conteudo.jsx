@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyledConteudo } from "../styles/styles.js";
+import { CgCopy, CgAttachment } from "react-icons/cg";
 
 import Artigo from "./Artigo";
 
@@ -7,9 +8,18 @@ import Artigo from "./Artigo";
 import cursos from "../api/cursos.js";
 
 function Conteudo() {
+  /* Criando um gerenciador de state para mudança filtro
+  de categorias. Inicialmente, começa null pois ainda não temos uma escolha/ seleção de categoria (aparece tudo) */
+  const [categoria, setCategoria] = useState(null);
+
   const aplicarFiltro = (event) => {
-    console.log(event.currentTarget.innerText);
+    // Capturamos (após o click) o texto esccrito em cada botão;
+    const categoriaEscolhida = event.currentTarget.innerText;
+    /* Em seguida passamos este texto para o state de categoria */
+    setCategoria(categoriaEscolhida);
+    
   };
+
 
   return (
     <StyledConteudo>
@@ -24,11 +34,17 @@ function Conteudo() {
 
       <div className="filtros">
         <p>
-          <b>Filtrar por: </b>
+          <b>
+            Filtrar por <CgCopy />:{" "}
+          </b>
           <button onClick={aplicarFiltro}>Front-end</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
         </p>
+        
+        {/* Rederização condicional o texto/tag/componente será renderizado se o state categoria existir (ou seja não é null, undefined, false)
+         */}
+        {categoria !== null && (<p className="escolha"> Você Escolheu: <b>{categoria} <CgAttachment /></b> </p> )}
       </div>
       <section className="artigos">
         {cursos.map((curso) => (
