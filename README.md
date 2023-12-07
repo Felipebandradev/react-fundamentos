@@ -1,5 +1,33 @@
 # Fundamentos de React
 
+## 11-navegacao-usando-rotas
+
+O React suporta a navegação/links como Single Page Application (SPA) usando uma biblioteca adicional chamada **React Rounter DOM**
+
+Portanto, é necessário instalar esta dependência:
+
+`npm install react-router-dom`
+
+---
+
+## 09-gerenciamento-de-estados-dos-componentes
+
+`Estado` ou `State` é uma propriedade especial de um componente que pode ser alterada ao longo do tempo. Por exemplo, um componente que exibe um contador de **likes** precisa de um gerenciamento de `states` para controlar a quantidade de **likes** recebidos.
+
+O uso de `states` permite ao React reagir às mudanças de renderização dos componentes.
+
+### Exemplos de mudanças que podem ser gerenciadas por states
+
+- Captura de dados de formulário
+- Visilidade de componentes
+- Filtros e buscas de dados
+- Contadores
+- Temas/estilos
+- Pontuação/vida de um jogador num jogo
+
+---
+
+
 ## 06-props
 
 São parâmetros/argumentos com valores/expressões passados para os componentes React, normalmente usados para injeção de dados dinâmicos. As `props` funcionam como objetos, e cada `prop` criada por você passar a ter propriedades deste objeto.
