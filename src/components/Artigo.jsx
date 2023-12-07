@@ -22,7 +22,7 @@ function Artigo(props) {
         <b>Curso:</b> {props.titulo}
       </p>
       <p>
-        <b>Preço:</b> {formatarPreco(props.preco)}
+        <b>Preço: </b> {formatarPreco(props.preco)}
       </p>
     </StyledArtigo>
   );
