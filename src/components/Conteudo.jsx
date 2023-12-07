@@ -1,12 +1,16 @@
+import { useState } from "react";
 import { StyledConteudo } from "../styles/styles.js";
+
 import Artigo from "./Artigo";
 
 /* Importando os cursos */
 import cursos from "../api/cursos.js";
 
-const dataLivro = ["10/10/1980", "10/07/2010", "14/04/2016"];
-
 function Conteudo() {
+  const aplicarFiltro = (event) => {
+    console.log(event.currentTarget.innerText);
+  };
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -17,6 +21,15 @@ function Conteudo() {
         labore iste veniam possimus facere adipisci sit repellat, voluptate,
         expedita aspernatur.
       </p>
+
+      <div className="filtros">
+        <p>
+          <b>Filtrar por: </b>
+          <button onClick={aplicarFiltro}>Front-end</button>
+          <button onClick={aplicarFiltro}>Back-End</button>
+          <button onClick={aplicarFiltro}>Design</button>
+        </p>
+      </div>
       <section className="artigos">
         {cursos.map((curso) => (
           <Artigo
