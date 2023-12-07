@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { StyledConteudo } from "../styles/styles.js";
-import { CgCopy, CgAttachment, CgClose } from "react-icons/cg";
+import { CgCopy, CgAttachment} from "react-icons/cg";
+import { IoBookOutline } from "react-icons/io5";
 
 import Artigo from "./Artigo";
 
@@ -27,6 +28,9 @@ function Conteudo() {
     return curso.categoria === categoria || categoria === null;
   });
 
+  /* Guardando a quantidade de cursos filtrados */
+  const quantidade = cursosFiltrados.length ;
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -51,19 +55,21 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Gastronomia</button>
         </p>
 
+        <p>Quantidade de Cursos: <b>{quantidade} </b><IoBookOutline /></p>
+
         {/* Rederização condicional o texto/tag/componente será renderizado se o state categoria existir (ou seja não é null, undefined, false)
          */}
         {categoria !== null && (
           <p>
-            Você Escolheu:
-            <b>
-              {categoria} <CgAttachment />
-            </b>{" "}
+            Você Escolheu: <b> {categoria} <CgAttachment /> </b>
             <button onClick={limpaFiltro}>🧹 Limpar Filtro</button>
           </p>
         )}
 
       </div>
+      { quantidade === 0 &&(
+      <h2 className="qtd0">Não há cursos dessa categoria</h2>)
+}
       <section className="artigos">
         {cursosFiltrados.map((curso) => (
           <Artigo

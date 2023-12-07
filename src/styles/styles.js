@@ -55,6 +55,7 @@ const StyledConteudo = styled.main`
   .filtros button:hover {
     background-color: purple;
     color: lavender;
+    box-shadow:  0 0 10px #48424b  inset;
   }
 
   .filtros b {
@@ -63,6 +64,12 @@ const StyledConteudo = styled.main`
 
   .filtros svg {
     color: #8797e2;
+  }
+
+  .qtd0{
+    text-align: center;
+    color: #ec7d87 ;
+    margin: 0.5rem;
   }
 
   
