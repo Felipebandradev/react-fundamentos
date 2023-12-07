@@ -19,6 +19,8 @@ function Conteudo() {
     setCategoria(categoriaEscolhida);
   };
 
+  const limpaFiltro = () => setCategoria(null);
+
   /* Gerando um novo array de cursos filtrados */
   const cursosFiltrados = cursos.filter((curso) => {
     /*  Se o state categoria for igual a uma     das categorias dos cursos, então será retornada    a lista de cursos daquela categoria. Senão, será     retornada lista completa devido ao state ser null (ou seja,    não há uma categoria para filtrar) */
@@ -47,24 +49,20 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Mobile</button>
           <button onClick={aplicarFiltro}>Música</button>
           <button onClick={aplicarFiltro}>Gastronomia</button>
-          {categoria !== null && (
-            <button onClick={() => setCategoria(null)}>
-            🧹  Limpar Filtro
-            </button>
-          )}
         </p>
 
         {/* Rederização condicional o texto/tag/componente será renderizado se o state categoria existir (ou seja não é null, undefined, false)
          */}
         {categoria !== null && (
           <p>
-            {" "}
-            Você Escolheu:{" "}
+            Você Escolheu:
             <b>
               {categoria} <CgAttachment />
             </b>{" "}
+            <button onClick={limpaFiltro}>🧹 Limpar Filtro</button>
           </p>
         )}
+
       </div>
       <section className="artigos">
         {cursosFiltrados.map((curso) => (
