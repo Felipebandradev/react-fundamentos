@@ -20,7 +20,7 @@ const StyledRodape = styled.footer`
   }
 `;
 
-const StyledConteudo = styled.main`
+const StyledListaCursos = styled.main`
 
 
   .filtros {
@@ -168,7 +168,7 @@ const StyledContainer = styled.main`
 
 export {
   StyledRodape,
-  StyledConteudo,
+  StyledListaCursos,
   StyledMenu,
   StyledArtigo,
   StyledCabecalho,

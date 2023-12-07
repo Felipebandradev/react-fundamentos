@@ -1,5 +1,8 @@
+import ListaCursos from "../components/Conteudo"
 function Home() {
-    return <h2>Bem Vindo</h2>
+    return <>
+    <ListaCursos />
+    </> ;
 }
 
 

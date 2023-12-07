@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { StyledConteudo } from "../styles/styles.js";
+import { StyledListaCursos } from "../styles/styles.js";
 import { CgCopy, CgAttachment} from "react-icons/cg";
 import { IoBookOutline } from "react-icons/io5";
 
@@ -8,7 +8,7 @@ import Artigo from "./Artigo";
 /* Importando os cursos */
 import cursos from "../api/cursos.js";
 
-function Conteudo() {
+function ListaCursos() {
   /* Criando um gerenciador de state para mudança filtro
   de categorias. Inicialmente, começa null pois ainda não temos uma escolha/ seleção de categoria (aparece tudo) */
   const [categoria, setCategoria] = useState(null);
@@ -32,7 +32,7 @@ function Conteudo() {
   const quantidade = cursosFiltrados.length ;
 
   return (
-    <StyledConteudo>
+    <StyledListaCursos>
       <h2>Conteúdo da aplicação</h2>
 
       <p>
@@ -80,8 +80,8 @@ function Conteudo() {
           />
         ))}
       </section>
-    </StyledConteudo>
+    </StyledListaCursos>
   );
 }
 
-export default Conteudo;
+export default ListaCursos;
