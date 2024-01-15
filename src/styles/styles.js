@@ -166,6 +166,13 @@ const StyledContainer = styled.main`
   }
 `;
 
+const StyledProdutoCard = styled.section`
+  img{
+    max-width: 100%;
+  }
+
+`;
+
 export {
   StyledRodape,
   StyledListaCursos,

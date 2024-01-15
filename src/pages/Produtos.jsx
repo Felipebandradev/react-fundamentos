@@ -7,6 +7,10 @@ function Produtos(){
     ele  será prenchido com os objetos/produtos*/
     const [produtos, setProdutos] = useState([]);
 
+    /* State de Loading */
+
+    const [loading, setLoading] = useState(true);
+
     /* Gerenciando efeito colateral
     do componente para o gerenciamento dos dados da API 
     
@@ -28,6 +32,7 @@ function Produtos(){
               const dados = await resposta.json();
               console.log(dados);
               setProdutos(dados);
+              setLoading(false); 
     
             } catch (error){
                 console.error("Houve um erro: "+error)
@@ -45,13 +50,16 @@ function Produtos(){
             <article>
                 <h2>Produtos</h2>
 
-                {produtos.map(produto => {
-                    return <section key={produto.id}>
-                        <h3>{produto.title}</h3>
-                        <p><b>Preço: </b>{produto.price}</p>
-                        <p><b>Descrição: </b>{produto.description}</p>
-                    </section>
-                })}
+                {  loading ? <p>Carregando...</p> :  produtos.map(produto => {
+                        return <section key={produto.id}>
+                            <h3>{produto.title}</h3>
+                            <img src={produto.image} alt={produto.title} />
+                            <p><b>Preço: </b>{produto.price}</p>
+                            <p><b>Descrição: </b>{produto.description}</p>
+                        </section>
+                    }) 
+                }       
+               
             </article>
     )
 }
