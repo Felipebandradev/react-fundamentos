@@ -12,12 +12,14 @@ function Produtos(){
           const resposta = await  fetch(`https://fakestoreapi.com/products`);
           const dados = await resposta.json();
           console.log(dados);
+          setProdutos(dados);
+
         } catch (error){
             console.error("Houve um erro: "+error)
         }
     }
 
-    
+
 
     return <h2>Produtos</h2>
 }
