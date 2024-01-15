@@ -17,7 +17,7 @@ function Produtos(){
     e que será executado uma vez.
 
     2) Em seguida, ele executa a função carregarProdutos
-    
+
     3) Ao término dela, atualiza o state (Produtos)
 
     */
@@ -28,7 +28,6 @@ function Produtos(){
               const dados = await resposta.json();
               console.log(dados);
               setProdutos(dados);
-    
     
             } catch (error){
                 console.error("Houve um erro: "+error)
@@ -42,7 +41,19 @@ function Produtos(){
 
 
 
-    return <h2>Produtos</h2>
+    return (
+            <article>
+                <h2>Produtos</h2>
+
+                {produtos.map(produto => {
+                    return <section key={produto.id}>
+                        <h3>{produto.title}</h3>
+                        <p><b>Preço: </b>{produto.price}</p>
+                        <p><b>Descrição: </b>{produto.description}</p>
+                    </section>
+                })}
+            </article>
+    )
 }
 
 export default Produtos;
