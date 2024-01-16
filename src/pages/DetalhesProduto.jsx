@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Imgloading from "../assets/loading.svg";
+import Loading from "../components/Loading";
 
 function DetalhesProduto() {
   /* Os parametros tem que ter o mesmo nome */
@@ -28,9 +28,7 @@ function DetalhesProduto() {
     <article>
       <h2 style={{ textAlign: "center" }}>Produto</h2>
       {loading ? (
-        <p style={{ textAlign: "center" }}>
-          <img src={Imgloading} alt="carregando..." />
-        </p>
+        <Loading />
       ) : (
         <div className="produto">
           <p style={{ textAlign: "center" }}>

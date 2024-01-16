@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { StyledProdutoCard } from "../styles/styles";
 
-import Imgloading from "../assets/loading.svg";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading";
 
 function Produtos() {
   /* O state "produtos" é iniciado como um array vazio
@@ -49,9 +49,7 @@ function Produtos() {
       <h2>Produtos</h2>
 
       {loading ? (
-        <p style={{ textAlign: "center" }}>
-          <img src={Imgloading} alt="carregando..." />
-        </p>
+        <Loading />
       ) : (
         produtos.map((produto) => {
           return (
