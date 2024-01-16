@@ -1,5 +1,17 @@
 # Fundamentos de React
 
+## 12-gerenciamento-de-efeitos-colaterais
+
+`Efeitos Colaterais` no React são operacões que não tem ligação direta com a renderização do componente, como por exemplo, solicitações de API e manipulação de eventos.
+
+Usamos o **hook** `useEffect` para garantir que esses efeitos colaterais ocorram no momento adequado do ciclo de vida do componente, evitando execuções repetitivas e problemas de carregamento e desempenho.
+
+### Sobre o array de dependências
+
+- Array vazio []: o efeito será executado apenas uma vez após a montagem do componente.
+
+- Array com elementos/variáveis [variável]: o efeito será executado quando os elementos/variáveis mudarem.
+
 ## 11-navegacao-usando-rotas
 
 O React suporta a navegação/links como Single Page Application (SPA) usando uma biblioteca adicional chamada **React Rounter DOM**
