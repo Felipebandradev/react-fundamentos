@@ -67,7 +67,10 @@ function Produtos() {
                 {produto.description}
               </p>
 
-              <p> <Link to={`/produtos/${produto.id}`}> Ver detalhes</Link> </p>
+              <p>
+                {" "}
+                <Link to={`/produtos/${produto.id}`}> Ver detalhes </Link>
+              </p>
             </StyledProdutoCard>
           );
         })
