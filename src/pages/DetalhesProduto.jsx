@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 
 function DetalhesProduto() {
-
   /* Os parametros tem que ter o mesmo nome */
-  const { id } =  useParams();
+  const { id } = useParams();
+ 
 
   return (
     <article>
@@ -16,7 +16,7 @@ function DetalhesProduto() {
       </p>
       <p>Descrição...</p>
       <p>
-        <img src="" alt="" />
+        <img src="" alt="produto..." />
       </p>
     </article>
   );
