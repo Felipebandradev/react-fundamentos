@@ -167,9 +167,10 @@ const StyledContainer = styled.main`
 `;
 
 const StyledProdutoCard = styled.section`
-  img{
-    max-width: 100%;
-  }
+ 
+ max-width: 100%;
+
+
 
 `;
 
@@ -179,5 +180,6 @@ export {
   StyledMenu,
   StyledArtigo,
   StyledCabecalho,
-  StyledContainer
+  StyledContainer,
+  StyledProdutoCard
 };

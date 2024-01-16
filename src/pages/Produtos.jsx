@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
+import { StyledProdutoCard } from "../styles/styles";
 
-function Produtos(){
+import Imgloading from "../assets/loading.svg";
 
-    /* O state "produtos" é iniciado como um array vazio
+function Produtos() {
+  /* O state "produtos" é iniciado como um array vazio
      posteriormente (após p carregamento da API),
     ele  será prenchido com os objetos/produtos*/
-    const [produtos, setProdutos] = useState([]);
+  const [produtos, setProdutos] = useState([]);
 
-    /* State de Loading */
+  /* State de Loading */
 
-    const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-    /* Gerenciando efeito colateral
+  /* Gerenciando efeito colateral
     do componente para o gerenciamento dos dados da API 
     
     Fluxo geral de  funcionamento do código abaixo:
@@ -25,43 +27,49 @@ function Produtos(){
     3) Ao término dela, atualiza o state (Produtos)
 
     */
-    useEffect(() =>{
-        const carregarDados = async () =>{
-            try {
-              const resposta = await  fetch(`https://fakestoreapi.com/products`);
-              const dados = await resposta.json();
-              console.log(dados);
-              setProdutos(dados);
-              setLoading(false); 
-    
-            } catch (error){
-                console.error("Houve um erro: "+error)
-            }
-        }
+  useEffect(() => {
+    const carregarDados = async () => {
+      try {
+        const resposta = await fetch(`https://fakestoreapi.com/products`);
+        const dados = await resposta.json();
+        console.log(dados);
+        setProdutos(dados);
+        setLoading(false);
+      } catch (error) {
+        console.error("Houve um erro: " + error);
+      }
+    };
 
-        carregarDados();
-    }, [] );
+    carregarDados();
+  }, []);
 
-    
+  return (
+    <article>
+      <h2>Produtos</h2>
 
-
-
-    return (
-            <article>
-                <h2>Produtos</h2>
-
-                {  loading ? <p>Carregando...</p> :  produtos.map(produto => {
-                        return <section key={produto.id}>
-                            <h3>{produto.title}</h3>
-                            <img src={produto.image} alt={produto.title} />
-                            <p><b>Preço: </b>{produto.price}</p>
-                            <p><b>Descrição: </b>{produto.description}</p>
-                        </section>
-                    }) 
-                }       
-               
-            </article>
-    )
+      {loading ? (
+        <p style={{ textAlign: "center" }}>
+          <img src={Imgloading} alt="carregando..." />
+        </p>
+      ) : (
+        produtos.map((produto) => {
+          return (
+            <StyledProdutoCard key={produto.id}>
+              <h3>{produto.title}</h3>
+              <p>
+                <b>Preço: </b>
+                {produto.price}
+              </p>
+              <p>
+                <b>Descrição: </b>
+                {produto.description}
+              </p>
+            </StyledProdutoCard>
+          );
+        })
+      )}
+    </article>
+  );
 }
 
 export default Produtos;
