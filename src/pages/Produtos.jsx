@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { StyledProdutoCard } from "../styles/styles";
 
 import Imgloading from "../assets/loading.svg";
+import { Link } from "react-router-dom";
 
 function Produtos() {
   /* O state "produtos" é iniciado como um array vazio
@@ -55,6 +56,7 @@ function Produtos() {
         produtos.map((produto) => {
           return (
             <StyledProdutoCard key={produto.id}>
+              <hr />
               <h3>{produto.title}</h3>
               <p>
                 <b>Preço: </b>
@@ -64,6 +66,8 @@ function Produtos() {
                 <b>Descrição: </b>
                 {produto.description}
               </p>
+
+              <p> <Link to={`/produtos/${produto.id}`}> Ver detalhes</Link> </p>
             </StyledProdutoCard>
           );
         })

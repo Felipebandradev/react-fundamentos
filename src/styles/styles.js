@@ -21,8 +21,6 @@ const StyledRodape = styled.footer`
 `;
 
 const StyledListaCursos = styled.section`
-
-
   .filtros {
     margin: 1rem 0;
     padding: 1rem 0;
@@ -38,13 +36,13 @@ const StyledListaCursos = styled.section`
     border: none;
     background-color: lavender;
     border-radius: 10px;
-    box-shadow: 0 0 10px #48424b  ;
+    box-shadow: 0 0 10px #48424b;
   }
 
   .filtros button:hover {
     background-color: purple;
     color: lavender;
-    box-shadow:  0 0 10px #48424b  inset;
+    box-shadow: 0 0 10px #48424b inset;
   }
 
   .filtros b {
@@ -55,15 +53,11 @@ const StyledListaCursos = styled.section`
     color: #8797e2;
   }
 
-  .qtd0{
+  .qtd0 {
     text-align: center;
-    color: #ec7d87 ;
+    color: #ec7d87;
     margin: 0.5rem;
   }
-
-  
-
- 
 
   @media screen and (min-width: 650px) {
     .artigos {
@@ -152,7 +146,7 @@ const StyledCabecalho = styled.header`
 `;
 
 const StyledContainer = styled.main`
- width: 90vw;
+  width: 90vw;
   margin: 1rem auto;
   background-color: aliceblue;
   padding: 1rem;
@@ -167,11 +161,28 @@ const StyledContainer = styled.main`
 `;
 
 const StyledProdutoCard = styled.section`
- 
- max-width: 100%;
+  max-width: 100%;
+  margin: 0.5rem auto;
 
+  a{
 
+    color: purple;
+    margin: 0.5rem;
+    padding: 0.2rem;
 
+    border: none;
+    background-color: lavender;
+    border-radius: 10px;
+    text-decoration: none;
+
+    &:hover{
+    background-color: purple;
+    color: lavender;
+    box-shadow: 0 0 10px #48424b inset;
+  }
+  }
+
+  
 `;
 
 export {
@@ -181,5 +192,5 @@ export {
   StyledArtigo,
   StyledCabecalho,
   StyledContainer,
-  StyledProdutoCard
+  StyledProdutoCard,
 };
